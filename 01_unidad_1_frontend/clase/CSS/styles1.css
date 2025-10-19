@@ -1,0 +1,149 @@
+/*
+  ================================================
+  Archivo: styles1.css
+  Simulación de primera clase de CSS
+  ================================================
+*/
+
+/*
+  --------------------
+  Selector Universal
+  --------------------
+  Aplica estilos a *todos* los elementos de la página.
+  Aquí se suele establecer un 'reset' o estilos base.
+*/
+* {
+  /* box-sizing: define cómo se calcula el ancho y alto total de un elemento.
+     border-box incluye padding y border dentro del ancho/alto especificado. */
+  box-sizing: border-box;
+
+  /* margin y padding a 0 para empezar con un diseño limpio (reset básico). */
+  margin: 0;
+  padding: 0;
+  
+  /* Puedes definir una fuente base para todo el documento */
+  font-family: Arial, sans-serif;
+  
+  /* Tamaño de fuente base */
+  font-size: 16px; 
+}
+
+/*
+  --------------------
+  Selector de Etiqueta (Type Selector)
+  --------------------
+  Selecciona todos los elementos de un tipo específico (ej: <body>, <h1>, <p>).
+*/
+body {
+  /* Background: Establece el color de fondo de la página. */
+  background-color: #f4f4f4; /* Un gris claro */
+  
+  /* Color: Define el color del texto por defecto en el body. */
+  color: #333; /* Un gris oscuro para el texto principal */
+  
+  /* Altura mínima del cuerpo de la página, a menudo se usa para diseños de página completa. */
+  min-height: 100vh;
+}
+
+h1 {
+  /* Text-align: Alinea el texto dentro del elemento (left, center, right, justify). */
+  text-align: center;
+  
+  /* Margen en la parte inferior para separar del contenido siguiente. */
+  margin-bottom: 20px;
+  
+  /* Padding interno en la parte superior e inferior. */
+  padding: 10px 0;
+  
+  /* Color del título. */
+  color: #007bff; /* Un azul primario */
+}
+
+/*
+  --------------------
+  Selector de Clase (Class Selector)
+  --------------------
+  Selecciona todos los elementos que tienen un atributo 'class' con el nombre especificado.
+  Se denota con un punto (.) seguido del nombre de la clase.
+  Es el selector más común y versátil para aplicar estilos.
+*/
+.contenedor {
+  /* Ancho máximo: Limita el ancho del elemento para mejorar la legibilidad. */
+  max-width: 1200px;
+  
+  /* Margin: auto centra el bloque horizontalmente (si tiene un width o max-width). */
+  margin: 0 auto;
+  
+  /* Padding interno para que el contenido no toque los bordes del contenedor. */
+  padding: 20px;
+  
+  /* Un fondo diferente para destacar el área del contenedor. */
+  background-color: #fff;
+  
+  /* Border-radius: Redondea las esquinas del elemento. */
+  border-radius: 8px;
+  
+  /* Box-shadow: Añade una sombra al elemento para darle profundidad. */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/*
+  Clase para botones o elementos interactivos.
+*/
+.boton-principal {
+  /* Propiedades de visualización: hace que se comporte como un bloque con propiedades de inline. */
+  display: inline-block; 
+  
+  /* Color de fondo del botón. */
+  background-color: #28a745; /* Un verde de éxito */
+  
+  /* Color del texto del botón. */
+  color: white;
+  
+  /* Padding interno para darle espacio al texto del botón. */
+  padding: 10px 15px;
+  
+  /* Quita el subrayado de los enlaces si el botón es un <a>. */
+  text-decoration: none;
+  
+  /* Cursor: Cambia el puntero al pasar por encima para indicar interactividad. */
+  cursor: pointer;
+  
+  /* Border: Borde delgado. */
+  border: 1px solid #28a745;
+  
+  /* Transición: Para animar suavemente los cambios de estado (ej: hover). */
+  transition: background-color 0.3s ease;
+}
+
+/*
+  --------------------
+  Pseudo-Clase (Hover)
+  --------------------
+  Aplica estilos solo cuando el usuario pasa el cursor (mouse) sobre el elemento.
+*/
+.boton-principal:hover {
+  /* Cambia el color de fondo para dar feedback visual de que es interactivo. */
+  background-color: #218838; /* Un verde más oscuro */
+  
+  /* Color del borde también cambia. */
+  border-color: #1e7e34;
+}
+
+/*
+  --------------------
+  Selector de ID (ID Selector)
+  --------------------
+  Selecciona un *único* elemento que tiene un atributo 'id' con el nombre especificado.
+  Se denota con un numeral (#) seguido del nombre del ID.
+  Tiene mayor especificidad que las clases.
+*/
+#encabezado-principal {
+  /* Border-bottom: Línea en la parte inferior. */
+  border-bottom: 2px solid #ccc;
+  
+  /* Padding inferior para separar del borde. */
+  padding-bottom: 10px;
+  
+  /* Estilos específicos que no se repetirán en otros elementos. */
+}
